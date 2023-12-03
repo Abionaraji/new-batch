@@ -10,5 +10,10 @@ pipeline{
                 git branch: 'master', url: 'https://github.com/Abionaraji/new-batch.git'
             }
         }
+        stage('Build Maven'){
+            steps{
+                sh 'mvn clean install'
+            }
+        }
     }
 }
