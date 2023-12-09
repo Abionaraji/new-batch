@@ -31,5 +31,10 @@ pipeline{
                 sh 'mvn checkstyle:checkstyle'
             }
         }
+        stage('Integrated Testing'){
+            steps{
+                sh 'mvn verify -DiskipUnitTests'
+            }
+        }
     }
 }
